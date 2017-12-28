@@ -1,0 +1,29 @@
+name: grafana-craige
+version: '4.6.3'
+summary: Monitoring, metric analytics & dashboards
+description: |
+  The tool for beautiful monitoring and metric analytics & dashboards for
+  Graphite, InfluxDB & Prometheus & More https://grafana.com
+
+grade: devel
+confinement: devmode
+
+apps:
+  grafana:
+    command: grafana-server
+    daemon: simple
+    restart-condition: always
+    plugs: [network-bind]
+
+parts:
+  grafana:
+    plugin: go
+    source: https://github.com/grafana/grafana.git
+    source-type: git
+    source-tag: v4.6.3
+  grafana-ui:
+    plugin: nodejs
+    after: [grafana]
+    source: https://github.com/grafana/grafana.git
+    source-type: git
+    source-tag: v4.6.3
