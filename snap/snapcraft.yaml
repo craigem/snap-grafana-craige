@@ -1,5 +1,5 @@
 name: grafana-craige
-version: '4.6.3'
+version: '3.1.1'
 summary: Monitoring, metric analytics & dashboards
 description: |
   The tool for beautiful monitoring and metric analytics & dashboards for
@@ -20,11 +20,11 @@ parts:
     plugin: go
     source: https://github.com/grafana/grafana.git
     source-type: git
-    source-tag: v4.6.3
+    source-tag: v3.1.1
     go-importpath: github.com/grafana/grafana
   grafana-ui:
     plugin: nodejs
     after: [grafana]
     source: https://github.com/grafana/grafana.git
     source-type: git
-    source-tag: v4.6.3
+    source-tag: v3.1.1
