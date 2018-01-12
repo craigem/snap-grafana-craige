@@ -21,6 +21,7 @@ parts:
     source: https://github.com/grafana/grafana.git
     source-type: git
     source-tag: v4.6.3
+    go-importpath: github.com/grafana/grafana
   grafana-ui:
     plugin: nodejs
     after: [grafana]
